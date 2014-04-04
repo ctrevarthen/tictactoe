@@ -12,10 +12,15 @@ describe(@"Board", ^{
         });
         it(@"board has 3x3 dimensions", ^{
             Board *board = [Board initWithBoardDimensions];
-//            Board *board = [[Board alloc] initWithBoardDimensions];
-            
             [[theValue(board.dimensions) should] equal:theValue(3)];
         });
+        it(@"All the cells start out empty", ^{
+            Board *board = [Board initWithBoardDimensions];
+            NSArray *cellArrayInitial = @[@[@"", @"", @""], @[@"", @"", @""], @[@"", @"", @""]];
+            NSMutableArray *cellArray = [[NSMutableArray alloc] initWithArray:cellArrayInitial];
+            [[board.cells should] equal:cellArray];
+        });
+    
     });
 });
 

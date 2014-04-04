@@ -11,6 +11,7 @@
 @interface Board : UIView
 
 @property (nonatomic) int dimensions;
+@property (nonatomic, strong) NSMutableArray *cells ;
 
 
 + (Board *)initWithBoardDimensions;

@@ -22,6 +22,9 @@
 + (Board *)initWithBoardDimensions {
     Board *board = [[Board alloc] init];
     board.dimensions = 3;
+    NSArray *cellArrayInitial = @[@[@"", @"", @""], @[@"", @"", @""], @[@"", @"", @""]];
+    NSMutableArray *cellArray = [[NSMutableArray alloc] initWithArray:cellArrayInitial];
+    board.cells = cellArray;
     return board;
 }
 
