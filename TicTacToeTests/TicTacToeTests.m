@@ -1,34 +1,10 @@
-//
-//  TicTacToeTests.m
-//  TicTacToeTests
-//
-//  Created by Christopher Trevarthen on 4/4/14.
-//  Copyright (c) 2014 Christopher Trevarthen. All rights reserved.
-//
+#import "Kiwi.h"
 
-#import <XCTest/XCTest.h>
+SPEC_BEGIN(TicTacToe)
 
-@interface TicTacToeTests : XCTestCase
+it(@"passes the test", ^{
+    assert(TRUE);
+});
 
-@end
 
-@implementation TicTacToeTests
-
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
-@end
+SPEC_END
