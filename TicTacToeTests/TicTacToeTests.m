@@ -16,11 +16,20 @@ describe(@"Board", ^{
         });
         it(@"All the cells start out empty", ^{
             Board *board = [Board initWithBoardDimensions];
-            NSArray *cellArrayInitial = @[@[@"", @"", @""], @[@"", @"", @""], @[@"", @"", @""]];
+            NSArray *cellArrayInitial = @[@[@"", @"", @""],
+                                          @[@"", @"", @""],
+                                          @[@"", @"", @""]];
             NSMutableArray *cellArray = [[NSMutableArray alloc] initWithArray:cellArrayInitial];
             [[board.cells should] equal:cellArray];
         });
     
+    });
+    context(@"when player makes a move", ^{
+        pending(@"fills in empty cell with X or O", ^{
+            Board *board = [Board initWithBoardDimensions];
+            [board playerMoveToCell:board.cells[0][0] withLetter:@"X"];
+            [[board.cells[0][0] should] equal:@"X"];
+        });
     });
 });
 

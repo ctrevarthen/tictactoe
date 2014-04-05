@@ -28,6 +28,10 @@
     return board;
 }
 
+- (void)playerMoveToCell:(NSString *)cellValue withLetter:(NSString *)letter {
+    cellValue = letter; 
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

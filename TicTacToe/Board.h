@@ -16,4 +16,6 @@
 
 + (Board *)initWithBoardDimensions;
 
+- (void)playerMoveToCell:(NSString *)cellValue withLetter:(NSString *)letter;
+
 @end
